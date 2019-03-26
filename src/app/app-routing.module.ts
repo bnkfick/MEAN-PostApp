@@ -7,8 +7,8 @@ import { PostCreateComponent } from './posts/post-create/post-create.component';
 
 const routes: Routes = [
   { path: '', component: PostListComponent },
-  { path: 'create', component:  PostCreateComponent },
-  { path: 'edit/:postid', component:  PostCreateComponent }
+  { path: 'create', component: PostCreateComponent },
+  { path: 'edit/:postId', component: PostCreateComponent },
 ];
 
 @NgModule({
