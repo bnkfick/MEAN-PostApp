@@ -31,10 +31,14 @@ app.post("/api/posts", (req, res, next) => {
     content: req.body.content
   });
   //console.log(post);
-  post.save();
-  res.status(201).json({
-    message:'Post added sucessfully'
+  post.save().then(result => {
+    console.log(createdPost);
+    res.status(201).json({
+      message:'Post added sucessfully',
+      postId: createdPost._id
+    });
   });
+
 });
 
 app.get("/api/posts", (req, res, next) => {
@@ -45,7 +49,8 @@ app.get("/api/posts", (req, res, next) => {
       message: "Posts fetched successfully!",
       posts: documents
     });
-  });
+  })
+  .error();
 });
 
 app.delete("/api/posts/:id", (req, res, next) => {
