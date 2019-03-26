@@ -1,6 +1,7 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 
+const Post = require('./models/post');
 const app = express();
 
 app.use(bodyParser.json());
@@ -13,9 +14,13 @@ app.use((req, res, next) => {
   res.setHeader("Access-Control-Allow-Methods", "GET, POST, PATCH, DELETE, OPTIONS");
   next();
 });
-
+//bnkfick
+//ZjgK7Ow7bAAgFgA5
 app.post("/api/posts", (req, res, next) => {
-  const post = req.body;
+  const post = new Post({
+    title: req.body.title,
+    content: req.body.content
+  });
   console.log(post);
   res.status(201).json({
     message:'Post added sucessfully'
