@@ -49,8 +49,7 @@ app.get("/api/posts", (req, res, next) => {
       message: "Posts fetched successfully!",
       posts: documents
     });
-  })
-  .error();
+  });
 });
 
 app.delete("/api/posts/:id", (req, res, next) => {
