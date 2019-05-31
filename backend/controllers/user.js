@@ -1,7 +1,4 @@
-// contain the logic for the routes
-// forward requests to my controller actions then from within the routes files,
-//
-// see which routes and middleware we have a bit quicker
+
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 
