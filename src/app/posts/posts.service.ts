@@ -36,6 +36,7 @@ export class PostsService {
         })
       )
       .subscribe(transformedPostData => {
+        console.log(transformedPostData);
         this.posts = transformedPostData.posts;
         this.postsUpdated.next({
           posts: [...this.posts],
@@ -87,7 +88,7 @@ export class PostsService {
         title: title,
         content: content,
         imagePath: image,
-        creator: null
+        creator: null //handle on server side to avoid maniplation
       };
     }
     this.http

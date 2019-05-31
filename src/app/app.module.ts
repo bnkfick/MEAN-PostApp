@@ -34,6 +34,7 @@ import { ErrorComponent } from './error/error.component';
     LoginComponent,
     SignupComponent,
     ErrorComponent
+    //
   ],
   imports: [
     BrowserModule,
@@ -57,5 +58,7 @@ import { ErrorComponent } from './error/error.component';
   ],
   bootstrap: [AppComponent],
   entryComponents: [ErrorComponent]
+  // NOT loading ErrorComponent through selector nor through routing
+  // so add to entryComponents for dynamic generation (normally auto detected and generated from selector or routing)
 })
 export class AppModule {}
