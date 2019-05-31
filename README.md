@@ -12,3 +12,16 @@ You always need to run ng serve for the dev server and npm run start:server in t
 
 Navigate to `http://localhost:4200/`. 
 The app will automatically reload if you change any of the source files.
+
+Features include:
+
+image upload
+pagination
+connecting the different models on the backend
+authentication
+authorization
+error handling
+
+
+ 
+
