@@ -23,7 +23,7 @@ exports.createPost =   (req, res, next) => {
         message: "Oops.  Something went wrong!  Creating a post failed."
       })
     });
-  }
+};
 
 exports.updatePost =   (req, res, next) => {
     let imagePath = req.body.imagePath;
@@ -55,10 +55,10 @@ exports.updatePost =   (req, res, next) => {
         message: "Couldn't update post!"
       })
     }) ;
-  }
+  };
 
 
-  exports.getAllPosts = (req, res, next) => {
+  exports.getPosts = (req, res, next) => {
     const pageSize = +req.query.pagesize;
     const currentPage = +req.query.page;
     const postQuery = Post.find();
